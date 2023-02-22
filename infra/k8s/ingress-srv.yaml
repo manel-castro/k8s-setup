@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
   rules:
-    - host: test.dev
+    - host: www.indive.info
       http:
         paths:
           - path: /?(.*)
