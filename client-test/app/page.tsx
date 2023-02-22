@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <ClickButton></ClickButton>
-      <div>Abouts</div>
+      <div>About1s</div>
     </>
   );
 }
