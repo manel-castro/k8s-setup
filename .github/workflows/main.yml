@@ -31,11 +31,20 @@ jobs:
     - name: 'Set project in gcloud CLI'
       run: 'gcloud config set project idyllic-lotus-378515'
       
-    - name: 'Set project location in gcloud CLI'
-      run: 'gcloud config set compute/location us-central1-c'
+    - id: 'get-credentials'
+      name: 'get credentials'
+      uses: 'google-github-actions/get-gke-credentials@v1'
+      with:
+        cluster_name: 'cluster-1'
+        location: 'us-central1-c'
+        
+    # The KUBECONFIG env var is automatically exported and picked up by kubectl.
+    - id: 'get-pods'
+      name: 'get-pods'
+      run: 'kubectl get pods'
+
       
-    - name: 'to work specifically with this cluster'
-      run: 'gcloud container clusters get-credentials cluster-1'
+  
       
       
 
