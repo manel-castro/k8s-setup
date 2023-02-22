@@ -55,6 +55,10 @@ jobs:
       
     - name: 'push docker image'
       run: docker push manelcastro/client-test
+      
+    - name: 'apply kubectl'
+      run: kubectl apply -f ticketing/infra/k8s
+      
     
       
   
