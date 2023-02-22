@@ -42,6 +42,17 @@ jobs:
     - id: 'get-pods'
       name: 'get-pods'
       run: 'kubectl get pods'
+      
+    - name: 'login to docker'
+      run: 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        #https://docs.docker.com/docker-hub/access-tokens/
+      
+    #  run: cd ticketing/client && docker build -t manelcastro/client .
+    # - 
+    #  - run: docker push manelcastro/client
 
       
   
