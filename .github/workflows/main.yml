@@ -30,4 +30,12 @@ jobs:
       
     - name: 'Set project in gcloud CLI'
       run: 'gcloud config set project idyllic-lotus-378515'
+      
+    - name: 'Set project location in gcloud CLI'
+      run: 'gcloud config set compute/location us-central1-c'
+      
+    - name: 'to work specifically with this cluster'
+      run: 'gcloud container clusters get-credentials cluster-1'
+      
+      
 
