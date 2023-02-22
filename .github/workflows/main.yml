@@ -27,3 +27,7 @@ jobs:
 
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
+      
+    - name: 'Set project in gcloud CLI'
+      run: 'gcloud config set project idyllic-lotus-378515'
+
