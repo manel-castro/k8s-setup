@@ -37,11 +37,7 @@ jobs:
       with:
         cluster_name: 'cluster-1'
         location: 'us-central1-c'
-        
-    # The KUBECONFIG env var is automatically exported and picked up by kubectl.
-    - id: 'get-pods'
-      name: 'get-pods'
-      run: 'kubectl get pods'
+      
       
     - name: 'login to docker'
       run: 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
@@ -58,6 +54,11 @@ jobs:
       
     - name: 'apply kubectl'
       run: kubectl apply -f infra/k8s
+      
+        # The KUBECONFIG env var is automatically exported and picked up by kubectl.
+    - id: 'get-deployments'
+      name: 'get-deployments'
+      run: 'kubectl get deployments'
       
     
       
