@@ -4,7 +4,7 @@ name: deploy-client
 on:
   push: #if merge actually counts as push
     branches:
-      - master
+      - main
     paths:
       - "client-test/**"
 
