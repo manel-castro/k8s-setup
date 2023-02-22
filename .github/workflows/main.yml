@@ -50,10 +50,12 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         #https://docs.docker.com/docker-hub/access-tokens/
       
-    #  run: cd ticketing/client && docker build -t manelcastro/client .
-    # - 
-    #  - run: docker push manelcastro/client
-
+    - name: 'build docker image'
+      run: cd client-test && docker build -t manelcastro/client-test .
+      
+    - name: 'push docker image'
+      run: docker push manelcastro/client-test .
+    
       
   
       
