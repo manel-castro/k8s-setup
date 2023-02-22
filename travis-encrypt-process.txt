@@ -1,0 +1,11 @@
+// INSTALLATION //
+1. docker run -it -v $(pwd):/app ruby sh
+- image to be used is ruby (ruby latest): it needs extrapackage (for gem) so alphine version wouldn't have work. 
+- we immediately startup a shell (sh)
+- we also setup a volume (-v $(pwd):/app). 
+    - colon is to map inside directory
+    - The purpose is to get the service account available inside the container
+2. gem install travis
+
+// INSTALLATION //
+3. travis login
