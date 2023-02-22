@@ -54,7 +54,7 @@ jobs:
       run: cd client-test && docker build -t manelcastro/client-test .
       
     - name: 'push docker image'
-      run: docker push manelcastro/client-test .
+      run: docker push manelcastro/client-test
     
       
   
