@@ -10,7 +10,7 @@ build:
   # googleCloudBuild:
   #   projectId: ticketing-dev-359710
   artifacts:
-    - image: test/client
+    - image: manelcastro/client-test
       # - image: us.gcr.io/ticketing-dev-359710/client
       context: client-test
       docker:

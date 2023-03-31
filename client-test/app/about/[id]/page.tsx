@@ -27,7 +27,7 @@ export default async function About({ params }: any) {
   // console.log(imgBlob);
   return (
     <div>
-      <div>aboutid</div>
+      <div>aboutid2 </div>
       <Image
         src={"https://i.dummyjson.com/data/products/11/1.jpg"}
         height={100}
