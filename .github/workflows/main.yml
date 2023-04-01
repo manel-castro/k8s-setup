@@ -52,8 +52,12 @@ jobs:
     - name: 'push docker image'
       run: docker push manelcastro/client-test
       
-    - name: 'apply kubectl'
-      run: kubectl apply -f infra/k8s
+      
+    - name: 'skaffold dev'
+      run: skaffold dev
+      
+   # - name: 'apply kubectl'
+    #  run: kubectl apply -f infra/k8s
       
         # The KUBECONFIG env var is automatically exported and picked up by kubectl.
     - id: 'get-deployments'
