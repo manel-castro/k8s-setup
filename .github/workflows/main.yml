@@ -53,10 +53,7 @@ jobs:
       run: docker push manelcastro/client-test
       
       
-    - name: 'skaffold version'
-      uses: hiberbee/github-action-skaffold@1.26.0
-      with: 
-        command: skaffold-version
+
         
     - name: 'skaffold build'
       uses: hiberbee/github-action-skaffold@1.26.0
