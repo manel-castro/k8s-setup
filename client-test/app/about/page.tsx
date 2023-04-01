@@ -6,7 +6,7 @@ export const metadata = {
 export default function About() {
   return (
     <div>
-      Abo1ut2/ssabout
+      Abo1ut2/ssabout2
       <Link href="/about/[id]" as={`/about/${123}`}>
         About123
       </Link>
